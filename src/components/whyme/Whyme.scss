@@ -1,0 +1,13 @@
+.Whyme {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 30px;
+
+    .iconDown {
+        bottom: 20px;
+
+        @media screen and (max-height: 950px) and (max-width: 800px) {
+            display: none;
+        }
+    }
+}

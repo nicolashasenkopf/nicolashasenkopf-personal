@@ -1,0 +1,35 @@
+.Aboutme {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 30px;
+
+    .textContent {
+        max-width: 1440px;
+        width: 90%;
+        text-align: center;
+        margin-top: 3vh;
+    }
+
+    .Socials {
+        width: 100%;
+        position: absolute;
+        bottom: 80px;
+
+        :nth-child(n) {
+            padding: 10px;
+        }
+
+        @media screen and (max-height: 950px) and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    .iconDown {
+        position: absolute;
+        bottom: 20px;
+
+        @media screen and (max-height: 950px) and (max-width: 1000px) {
+            display: none;
+        }
+    }
+}

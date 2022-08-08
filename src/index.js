@@ -1,17 +1,28 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import * as ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import theme from './utils/theme';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    {localStorage.setItem('chakra-ui-color-mode', 'dark')}
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );
 

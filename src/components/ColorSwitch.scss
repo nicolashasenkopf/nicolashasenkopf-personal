@@ -1,0 +1,8 @@
+#ColorSwitch {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background-color: var(--chakra-colors-secondaryDark);
+}
