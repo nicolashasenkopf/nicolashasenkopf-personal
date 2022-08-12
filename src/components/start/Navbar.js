@@ -69,6 +69,9 @@ function Navbar() {
               <Link to="whyme" smooth={true} spy={true}>
                 <Button variant="ghost">Why me?</Button>
               </Link>
+              <Link to="pricing" smooth={true} spy={true}>
+                <Button variant="ghost">Pricing</Button>
+              </Link>
               <Link to="contact" smooth={true} spy={true}>
                 <Button bg="secondaryLight" color="bg" size="md">
                   Contact
@@ -141,6 +144,11 @@ function Navbar() {
                 <Link to="whyme" smooth={true} spy={true}>
                   <Button w="full" variant="ghost">
                     Why me?
+                  </Button>
+                </Link>
+                <Link to="pricing" smooth={true} spy={true}>
+                  <Button w="full" variant="ghost">
+                    Pricing
                   </Button>
                 </Link>
                 <Link to="contact" smooth={true} spy={true}>

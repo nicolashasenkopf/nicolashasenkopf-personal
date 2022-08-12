@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Center, useColorMode } from '@chakra-ui/react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -10,6 +10,8 @@ import Navbar from './Navbar';
 import Welcome from './Welcome';
 
 function Home() {
+  const { colorMode } = useColorMode();
+
   const particlesInit = async main => {
     await loadLinksPreset(main);
   };
@@ -24,6 +26,12 @@ function Home() {
             color: 'bg',
           },
           particles: {
+            color: {
+              value: colorMode === 'light' ? '#1A202C' : '#ffffff',
+            },
+            links: {
+              color: colorMode === 'light' ? '#1A202C' : '#ffffff',
+            },
             number: {
               density: {
                 enable: true,

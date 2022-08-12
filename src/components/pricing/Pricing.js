@@ -153,7 +153,9 @@ function Pricing() {
                       color: 'secondaryLight',
                     }}
                   >
-                    Contact
+                    <scroll.Link to='contact' spy={true} smooth={true}>
+                      Contact
+                    </scroll.Link>
                   </Link>
                 </Flex>
                 <Stack direction="column" p="6" spacing="3" flexGrow="1">
@@ -234,7 +236,9 @@ function Pricing() {
                       color: 'secondaryLight',
                     }}
                   >
-                    Contact
+                    <scroll.Link to='contact' spy={true} smooth={true}>
+                      Contact
+                    </scroll.Link>
                   </Link>
                 </Flex>
                 <Stack direction="column" p="6" spacing="3" flexGrow="1">
