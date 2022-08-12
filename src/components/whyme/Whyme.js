@@ -77,7 +77,7 @@ function Whyme() {
           }}
           color="secondaryLight"
         >
-          Warum solltest du mich als Entwickler für deine App/Webseite
+          Warum sollten Sie mich als Entwickler für Ihre App/Webseite
           engagieren?
         </chakra.p>
       </Box>
@@ -114,7 +114,7 @@ function Whyme() {
       </Box>
 
       <Center>
-        <scroll.Link className="iconDown" to="contact" smooth={true} spy={true}>
+        <scroll.Link className="iconDown" to="pricing" smooth={true} spy={true}>
           <FontAwesomeIcon size="3x" icon={faChevronDown} />
         </scroll.Link>
       </Center>

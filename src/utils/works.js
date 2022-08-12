@@ -43,7 +43,7 @@ const works = [
   },
   {
     title: 'Dein Projekt',
-    description: 'Du brauchst noch eine Webseite oder App? Melde dich bei mir!',
+    description: 'Sie brauchen noch eine Webseite oder App? Melden Sie sich bei mir!',
     imageUrl: project,
     url: 'https://nicolas-hasenkopf.de/#contact',
     status: 'OPEN',

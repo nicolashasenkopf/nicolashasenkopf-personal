@@ -1,9 +1,9 @@
-import { Center, Hide } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import Particles from 'react-particles';
 import { Link } from 'react-scroll';
+import Particles from 'react-tsparticles';
 import { loadLinksPreset } from 'tsparticles-preset-links';
 import './Home.scss';
 import Navbar from './Navbar';
@@ -16,20 +16,26 @@ function Home() {
 
   return (
     <div id="start" className="Home">
-      <Hide below="md">
-        <Particles
-          width="100%"
-          height="100vh"
-          className="particles"
-          options={{
-            preset: 'links',
-            background: {
-              color: 'bg',
+      <Particles
+        className="particles"
+        options={{
+          preset: 'links',
+          background: {
+            color: 'bg',
+          },
+          particles: {
+            number: {
+              density: {
+                enable: true,
+                area: 1000,
+              },
+              value: 60,
             },
-          }}
-          init={particlesInit}
-        />
-      </Hide>
+          },
+          detectRetina: true,
+        }}
+        init={particlesInit}
+      />
       <Navbar />
       <Welcome />
       <Center>

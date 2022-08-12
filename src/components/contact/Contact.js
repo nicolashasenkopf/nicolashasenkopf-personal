@@ -34,7 +34,7 @@ function Contact() {
     if (!value) {
       error = 'Email wird benötigt';
     } else if (!re.test(value.toLowerCase())) {
-      error = 'Bitte gib eine valide Email ein';
+      error = 'Bitte geben Sie eine valide Email ein';
     }
     return error;
   }
@@ -188,8 +188,9 @@ function Contact() {
           }}
           color="secondaryLight"
         >
-          Du brauchst eine Webseite oder App? Dann kontaktiere mich doch hier
-          oder per <Link href="tel:+4915110753705">Telefon!</Link>
+          Sie brauchen eine Webseite oder App? Dann kontaktieren Sie mich doch
+          hier oder per{' '}
+          <Link href="tel:+4915110753705">Telefon (klick mich)</Link>
         </chakra.p>
       </Box>
 
@@ -226,7 +227,7 @@ function Contact() {
                 toast({
                   render: () =>
                     successAlert({
-                      message: 'Deine Nachricht wurde verschickt',
+                      message: 'Ihre Nachricht wurde verschickt',
                     }),
                 });
               } else {
@@ -234,7 +235,7 @@ function Contact() {
                   render: () =>
                     errorAlert({
                       message:
-                        'Es ist ein Fehler aufgetreten. Bitte versuche es erneut!',
+                        'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut!',
                     }),
                 });
               }
@@ -261,7 +262,7 @@ function Contact() {
                         }}
                       />
                       <FormHelperText color="bg">
-                        Deine Email wird nicht abgespeichert
+                        Ihre Email wird nicht abgespeichert
                       </FormHelperText>
                       <FormErrorMessage>{form.errors.email}</FormErrorMessage>
                     </FormControl>

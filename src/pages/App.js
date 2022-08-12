@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Aboutme from '../components/aboutme/Aboutme';
 import Contact from '../components/contact/Contact';
 import Footer from '../components/footer/Footer';
+import Pricing from '../components/pricing/Pricing';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import Skills from '../components/skills/Skills';
 import Home from '../components/start/Home';
@@ -48,6 +49,7 @@ function App() {
       <Skills />
       <Work />
       <Whyme />
+      <Pricing />
       <Contact />
       <Footer />
       <ScrollToTopButton />
