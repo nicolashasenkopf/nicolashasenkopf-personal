@@ -65,7 +65,7 @@ function Impressum() {
           <p>
             Telefon: +491743454368
             <br />
-            E-Mail: contact.hasenkopf@gmail.com
+            E-Mail: info@nicolas-hasenkopf.de
           </p>
         </Box>
       </Box>
