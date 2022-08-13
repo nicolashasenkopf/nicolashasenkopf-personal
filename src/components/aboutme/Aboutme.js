@@ -91,7 +91,7 @@ function Aboutme() {
       </Center>
       <Center mt={5}>
         <Text fontSize="xl" className="textContent">
-          Ich bin Nicolas Hasenkopf und {age()} Jahre alt und entwickle
+          Ich bin Nicolas Hasenkopf, {age()} Jahre alt und entwickle
           leidenschaftlich gerne Webseiten und Mobile-Apps. Seit {devDuration()}{' '}
           Jahren beschäftige ich mich nun schon mit der Informatik und mit dem
           Programmieren. 2021 konnte ich dann mein Hobby zum Beruf machen und

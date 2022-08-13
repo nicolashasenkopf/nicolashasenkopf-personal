@@ -244,7 +244,7 @@ function Contact() {
             }}
           >
             {props => (
-              <Form>
+              <Form data-splitbee-event="Kontaktformular">
                 <Field name="email" validate={validateEmail}>
                   {({ field, form }) => (
                     <FormControl

@@ -31,13 +31,10 @@ function App() {
   useEffect(() => {
     window.onscroll = event => {
       var button = document.getElementById('ScrollToTopButton');
-      var button2 = document.getElementById('ColorSwitch');
       if (window.scrollY >= 200) {
         button.style.display = 'block';
-        button2.style.display = 'block';
       } else {
         button.style.display = 'none';
-        button2.style.display = 'none';
       }
     };
   });
