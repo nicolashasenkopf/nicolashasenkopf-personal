@@ -6,6 +6,8 @@ import {
   Flex,
   HStack,
   IconButton,
+  Image,
+  useColorMode,
   useColorModeValue,
   useDisclosure,
   VisuallyHidden,
@@ -16,8 +18,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { Link } from 'react-scroll';
+import logo from '../../images/logo-1024.png';
+import logoDark from '../../images/logo-1024-dark.png';
 
 function Navbar() {
+  const { colorMode } = useColorMode()
   const bg = useColorModeValue('white', 'bg');
   const mobileNav = useDisclosure();
   return (
@@ -31,13 +36,14 @@ function Navbar() {
         py={4}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          <Flex>
+          <Flex alignItems="center">
             <chakra.a
               href="/"
               title="Nicolas Hasenkopf"
               display="flex"
               alignItems="center"
             >
+              <Image boxSize="50px" src={colorMode === 'light' ? logo : logoDark} alt="logo" />
               <VisuallyHidden>Nicolas Hasenkopf</VisuallyHidden>
             </chakra.a>
             <chakra.h1 fontSize="xl" fontWeight="700" ml="2">
