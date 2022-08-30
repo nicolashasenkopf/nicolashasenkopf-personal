@@ -2,6 +2,7 @@ import { Box, Center, chakra, Flex, SimpleGrid, Tag } from '@chakra-ui/react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Link } from 'react-scroll';
 import works from '../../utils/works';
 import './Work.scss';
@@ -107,58 +108,65 @@ function Work() {
   };
 
   return (
-    <div id="work" className="Work">
-      <Flex w="auto" justifyContent="center" alignItems="center">
-        <Box px={8} py={20} mx="auto">
-          <Box textAlign="center">
-            <chakra.p
-              mt={2}
-              fontSize={{
-                base: '3xl',
-                sm: '4xl',
-              }}
-              lineHeight="8"
-              fontWeight="extrabold"
-              letterSpacing="tight"
-              _light={{
-                color: 'gray.900',
-              }}
-            >
-              Work
-            </chakra.p>
-            <chakra.p
-              mt={4}
-              maxW="2xl"
-              fontSize="xl"
-              mx={{
-                lg: 'auto',
-              }}
-              color="secondaryLight"
-            >
-              Eine Übersicht über ein paar Projekte die ich bereits umgesetzt
-              habe bzw. in Umsetzung sind
-            </chakra.p>
+    <AnimationOnScroll
+      animateIn="animate__fadeIn"
+      duration={1.5}
+      animateOnce={true}
+      animatePreScroll={true}
+    >
+      <div id="work" className="Work">
+        <Flex w="auto" justifyContent="center" alignItems="center">
+          <Box px={8} py={20} mx="auto">
+            <Box textAlign="center">
+              <chakra.p
+                mt={2}
+                fontSize={{
+                  base: '3xl',
+                  sm: '4xl',
+                }}
+                lineHeight="8"
+                fontWeight="extrabold"
+                letterSpacing="tight"
+                _light={{
+                  color: 'gray.900',
+                }}
+              >
+                Work
+              </chakra.p>
+              <chakra.p
+                mt={4}
+                maxW="2xl"
+                fontSize="xl"
+                mx={{
+                  lg: 'auto',
+                }}
+                color="secondaryLight"
+              >
+                Eine Übersicht über ein paar Projekte die ich bereits umgesetzt
+                habe bzw. in Umsetzung sind
+              </chakra.p>
+            </Box>
+            <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }}>
+              {works.map(work => (
+                <WorkItem
+                  title={work.title}
+                  description={work.description}
+                  imageUrl={work.imageUrl}
+                  url={work.url}
+                  status={work.status}
+                />
+              ))}
+            </SimpleGrid>
           </Box>
-          <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }}>
-            {works.map(work => (
-              <WorkItem
-                title={work.title}
-                description={work.description}
-                imageUrl={work.imageUrl}
-                url={work.url}
-                status={work.status}
-              />
-            ))}
-          </SimpleGrid>
-        </Box>
-      </Flex>
+        </Flex>
 
-      <Center>
-        <Link to="whyme" className="iconDown" smooth={true} spy={true}>
-          <FontAwesomeIcon size="3x" icon={faChevronDown} />
-        </Link>
-      </Center>
-    </div>
+        <Center>
+          <Link to="whyme" className="iconDown" smooth={true} spy={true}>
+            <FontAwesomeIcon size="3x" icon={faChevronDown} />
+          </Link>
+        </Center>
+      </div>
+    </AnimationOnScroll>
   );
 }
 

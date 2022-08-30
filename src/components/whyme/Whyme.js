@@ -2,6 +2,7 @@ import { Box, Center, chakra, Flex, Stack } from '@chakra-ui/react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import scroll from 'react-scroll';
 import features from '../../utils/features';
 import './Whyme.scss';
@@ -51,74 +52,86 @@ function Whyme() {
   };
 
   return (
-    <div id="whyme" className="Whyme">
-      <Box textAlign="center" px={8} py={20}>
-        <chakra.p
-          mt={2}
-          fontSize={{
-            base: '3xl',
-            sm: '4xl',
-          }}
-          lineHeight="8"
-          fontWeight="extrabold"
-          letterSpacing="tight"
-          _light={{
-            color: 'gray.900',
-          }}
-        >
-          Why me?
-        </chakra.p>
-        <chakra.p
-          mt={4}
-          maxW="2xl"
-          fontSize="xl"
-          mx={{
-            lg: 'auto',
-          }}
-          color="secondaryLight"
-        >
-          Warum sollten Sie mich als Entwickler für Ihre App/Webseite
-          engagieren?
-        </chakra.p>
-      </Box>
+    <AnimationOnScroll
+      animateIn="animate__fadeIn"
+      duration={1.5}
+      animateOnce={true}
+      animatePreScroll={true}
+    >
+      <div id="whyme" className="Whyme">
+        <Box textAlign="center" px={8} py={20}>
+          <chakra.p
+            mt={2}
+            fontSize={{
+              base: '3xl',
+              sm: '4xl',
+            }}
+            lineHeight="8"
+            fontWeight="extrabold"
+            letterSpacing="tight"
+            _light={{
+              color: 'gray.900',
+            }}
+          >
+            Why me?
+          </chakra.p>
+          <chakra.p
+            mt={4}
+            maxW="2xl"
+            fontSize="xl"
+            mx={{
+              lg: 'auto',
+            }}
+            color="secondaryLight"
+          >
+            Warum sollten Sie mich als Entwickler für Ihre App/Webseite
+            engagieren?
+          </chakra.p>
+        </Box>
 
-      <Box mt={20} px={8}>
-        <Stack
-          spacing={{
-            base: 10,
-            md: 0,
-          }}
-          display={{
-            md: 'grid',
-          }}
-          gridTemplateColumns={{
-            md: 'repeat(2,1fr)',
-          }}
-          gridColumnGap={{
-            md: 8,
-          }}
-          gridRowGap={{
-            base: '20px',
-            md: '80px',
-          }}
-          alignItems="center"
-        >
-          {features.map(feature => (
-            <Center>
-              <Feature title={feature.title} icon={feature.icon}>
-                {feature.description}
-              </Feature>
-            </Center>
-          ))}
-        </Stack>
-      </Box>
+        <Box mt={20} px={8}>
+          <Stack
+            spacing={{
+              base: 10,
+              md: 0,
+            }}
+            display={{
+              md: 'grid',
+            }}
+            gridTemplateColumns={{
+              md: 'repeat(2,1fr)',
+            }}
+            gridColumnGap={{
+              md: 8,
+            }}
+            gridRowGap={{
+              base: '20px',
+              md: '80px',
+            }}
+            alignItems="center"
+          >
+            {features.map(feature => (
+              <Center>
+                <Feature title={feature.title} icon={feature.icon}>
+                  {feature.description}
+                </Feature>
+              </Center>
+            ))}
+          </Stack>
+        </Box>
 
-      <Center>
-        <scroll.Link className="iconDown" to="pricing" smooth={true} spy={true}>
-          <FontAwesomeIcon size="3x" icon={faChevronDown} />
-        </scroll.Link>
-      </Center>
-    </div>
+        <Center>
+          <scroll.Link
+            className="iconDown"
+            to="pricing"
+            smooth={true}
+            spy={true}
+          >
+            <FontAwesomeIcon size="3x" icon={faChevronDown} />
+          </scroll.Link>
+        </Center>
+      </div>
+    </AnimationOnScroll>
   );
 }
 
