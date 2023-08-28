@@ -179,7 +179,7 @@ function Pricing() {
                     fontSize="sm"
                     color="secondaryLight"
                   >
-                    * Der Preis ist abh&auml;ngig vom Unfang und der
+                    * Der Preis ist abh&auml;ngig vom Umfang und der
                     Funktionalitäten der Webseite
                   </Text>
                 </Box>
@@ -266,7 +266,7 @@ function Pricing() {
                     fontSize="sm"
                     color="secondaryLight"
                   >
-                    * Der Preis ist abh&auml;ngig vom Unfang und der
+                    * Der Preis ist abh&auml;ngig vom Umfang und der
                     Funktionalitäten der App
                   </Text>
                 </Box>
